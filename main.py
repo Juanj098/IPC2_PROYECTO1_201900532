@@ -58,7 +58,7 @@ while opc != 'x':
         else:
             print('no se encontro archivo')
     elif opc == '2':
-        print('Procesar archivo')
+        print('Procesar Archivo')
         list_sen.enlist()
         list_sen.enlist_d()
     elif opc == '3':
