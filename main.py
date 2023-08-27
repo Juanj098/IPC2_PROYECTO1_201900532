@@ -59,8 +59,56 @@ while opc != 'x':
             print('no se encontro archivo')
     elif opc == '2':
         print('Procesar Archivo')
+        print('<-------------------------->')
         list_sen.enlist()
-        list_sen.enlist_d()
+        print('<------------------------->')
+        print('             (x)           ')
+        print('<------------------------->')
+        sen = input(' -> ')
+        res = list_sen.search_sen(sen)
+        os.system('cls')
+        while sen != 'x':
+            if res:
+                print('<------------------------>')
+                print('1. Matriz de Frecuecias   ')
+                print('2. Matriz de patrones     ')
+                print('3. Matriz reducida        ')
+                print('<------------------------>')
+                print('           (x)            ')
+                print('<------------------------>')
+                r = input('-> ')
+                while r != 'x':
+                    if r == '1':
+                        os.system('cls')
+                        print('Matriz de frecuencias')
+                        res.matriz_frec()
+                    elif r == '2':
+                        os.system('cls')
+                        print('Matriz de patrones')
+                        res.matriz_Pa()
+                    elif r == '3':
+                        os.system('cls')
+                        print('matriz Reducida')
+                    else:
+                        print('Opcion no valida')
+                    print('<------------------------>')
+                    print('1. Matriz de Frecuecias   ')
+                    print('2. Matriz de patrones     ')
+                    print('3. Matriz reducida        ')
+                    print('<------------------------>')
+                    print('           (x)            ')
+                    print('<------------------------>')
+                    r = input('-> ')
+                    os.system('cls')
+            else:
+                print('opcion no valida')
+            print('<-------------------------->')
+            list_sen.enlist()
+            print('<------------------------->')
+            print('             (x)           ')
+            print('<------------------------->')
+            sen = input(' -> ')
+            os.system('cls')
     elif opc == '3':
         print('Escribir archivo salida')
     elif opc == '4':
