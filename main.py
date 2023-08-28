@@ -89,6 +89,7 @@ while opc != 'x':
                     elif r == '3':
                         os.system('cls')
                         print('matriz Reducida')
+                        res.matriz_re()
                     else:
                         print('Opcion no valida')
                     print('<------------------------>')
