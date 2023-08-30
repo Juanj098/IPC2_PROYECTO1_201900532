@@ -4,7 +4,9 @@ import xml.etree.ElementTree as ET
 from list_senals import List_senal
 from list_Data import List_Datos
 from senales import Senal, Dato
+from list_iden import List_Identicos
 
+list_i = List_Identicos()
 list_datos = List_Datos()
 list_sen = List_senal()
 os.system('cls')

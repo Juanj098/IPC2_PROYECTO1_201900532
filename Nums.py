@@ -3,26 +3,26 @@ class Nodo:
         self.dato = dato
         self.next = None
 
-class linkedList:
+class List_Nums:
     def __init__(self) -> None:
         self.init = None
         self.len = 0
-    
+
     def vacia(self):
-        if self.init is None:
+        if self.init == None:
             return True
 
-    def New_D(self,dato):
-        n_nodo = Nodo(dato)
-        if self.vacia():
-            self.init = n_nodo
+    def New_Num(self,dato):
+        node = Nodo(dato)
+        if self.vacia:
+            self.init = node
         else:
             aux = self.init
             while aux.next:
                 aux = aux.next
-            aux.next = n_nodo
+            aux.next = node
         self.len+=1
-    
+
     def enlist(self):
         if self.vacia():
             print('lista vacia')
@@ -30,18 +30,14 @@ class linkedList:
             aux = self.init
             while aux:
                 print(aux.dato.prnt())
-                aux = aux.next
+                aux =aux.next
 
-    def cadenaList(self):
-        cadena = ''
+    def operar(self,lenarr,groups):
         if self.vacia():
             print('lista vacia')
         else:
             aux = self.init
             while aux:
-                cadena+=f' {aux.dato.dat} '
+                if aux.dato.grupo == groups and aux.dato.dato == str(lenarr):
+                    return int(aux.dato.dato)
                 aux = aux.next
-        return cadena
-    
-    def vaciar(self):
-        self.init = None

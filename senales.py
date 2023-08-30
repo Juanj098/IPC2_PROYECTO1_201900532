@@ -4,6 +4,11 @@ from linkedList import linkedList
 linked = linkedList()
 from list_grupos import List_Grupos
 list_g = List_Grupos()
+from list_iden import List_Identicos
+list_I = List_Identicos()
+from Nums import List_Nums
+list_n = List_Nums()
+
 class Senal:
     def __init__(self,nombre,t,a,list) -> None:
         self .name = nombre
@@ -72,17 +77,29 @@ class Senal:
         os.system("dot -Tpng Matriz_Pa.dot -o Matriz_Pa.png")        
 
     def matriz_re(self):
+        list_g.vaciar()
         for y in range(1,int(self.tiem)+1):
-            patron = ""
+            patron = ''
+            data = ''
             for x in range(1,int(self.amp)+1):
                 resp= self.list.search_T(y,x)
                 if resp:
                     patron+=resp.state
-                    linked.New_D(resp)
-            gr = Grupos(y,patron,linked)
+                    data+=resp.dat
+                    if x <= int(self.amp):
+                        data+=';'
+            gr = Grupos(y,patron,data,self.amp)
             list_g.New_G(gr)
-        
         list_g.enlist()
+        print('-------')
+        list_g.Iguales()
+        print('-------')
+        list_g.enlis_I()
+        print('--------')
+        list_g.graph()
+  
+
+
 
 class Dato:
     def __init__(self,t,a,st,dat) -> None:
@@ -95,10 +112,12 @@ class Dato:
         return f't:{self.ti}, A:{self.ampl}, State:{self.state}, D:{self.dat}'
 
 class Grupos:
-    def __init__(self,G,patron,list_d) -> None:
+    def __init__(self,G,patron,datos,len) -> None:
         self.gr = G
         self.patron = patron
-        self.list_d = list_d
+        self.list_d = datos
+        self.len = len
 
     def prnt(self):
-        return f'Grupo: {self.gr}, Patron: {self.patron}'
+        return f'Grupo: {self.gr}, Patron: {self.patron} Elm: {self.list_d}'
+

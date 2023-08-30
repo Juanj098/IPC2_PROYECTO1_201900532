@@ -1,3 +1,16 @@
+from list_iden import List_Identicos
+
+list_i = List_Identicos()
+
+class Iden:
+    def __init__(self,grupos,lis,len) -> None:
+        self.Grupos = grupos
+        self.list = lis
+        self.len = len
+
+    def prnt(self):
+        return f'Gr:{self.Grupos} list:{self.list}'
+
 class Nodo:
     def __init__(self,dato) -> None:
         self.dato = dato
@@ -34,3 +47,54 @@ class List_Grupos:
             while aux:
                 print(aux.dato.prnt())
                 aux =aux.next
+
+    def search_G(self,nG):
+        if self.vacia():
+            return 'Lista Vacia'
+        else:
+            aux = self.init
+            while aux:
+                if aux.dato.gr == (nG):
+                    return aux.dato
+                aux = aux.next
+    
+    def delete_D(self,dato):
+        if self.vacia():
+            return 'lista vacia'
+        if self.init.dato.gr == dato:
+            self.init = self.init.next
+        else:
+            prev = None
+            aux = self.init
+            while aux:
+                if aux.dato.gr == dato:
+                    prev.next = aux.next
+                prev = aux
+                aux = aux.next
+
+    def Iguales(self):
+        if self.vacia():
+            return 'Lista Vacia'
+        else:
+            lis_da = ''
+            groups = ''
+            aux = self.init
+            current = self.init.dato.patron
+            while aux:
+                if current == aux.dato.patron:
+                    groups+=f'{aux.dato.gr} '
+                    lis_da+=f'{aux.dato.list_d}/'
+                    self.delete_D(aux.dato.gr)
+                    len = aux.dato.len
+                aux = aux.next
+            print(f'GR: {groups} Datos: {lis_da}')
+            dato = Iden(groups,lis_da,len)
+            list_i.New_gr(dato)
+        self.Iguales()
+    
+    def enlis_I(self):
+        list_i.ret_dato()
+
+    def graph(self):
+        list_i.graficar()
+
