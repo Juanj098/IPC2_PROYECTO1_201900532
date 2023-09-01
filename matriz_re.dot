@@ -1,0 +1,36 @@
+digraph main {
+        node [shape = plaintext]
+        struct1 [label=<
+        <table border = '0' cellborder = '1' cellspacing = '0'>
+        <tr>
+	<td bgcolor="Green">t|A</td>
+	<td>1</td>
+	<td>2</td>
+	<td>3</td>
+	</tr>
+		<tr>
+			<td>G: 1 2 10 </td>
+			<td>9</td>
+			<td>16</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>G: 3 4 5 </td>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>G: 6 7 </td>
+			<td>7</td>
+			<td>0</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>G: 8 9 </td>
+			<td>9</td>
+			<td>9</td>
+			<td>0</td>
+		</tr>
+	</table>>];
+}

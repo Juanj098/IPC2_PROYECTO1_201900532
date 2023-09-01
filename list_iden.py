@@ -37,43 +37,67 @@ class List_Identicos:
                 print(aux.dato.prnt())
                 aux =aux.next
 
-    def ret_dato(self):
+    def ret_dato(self,mtx):
         if self.vacia():
             print ('Lista vacia')
         else:
             aux = self.init
             while aux:
-                self.Analizar(aux.dato.list,aux.dato.Grupos,aux.dato.len)
+                fun = self.Analizar(aux.dato.list,aux.dato.Grupos,aux.dato.len)
+                mtx += fun
                 aux =aux.next
-        
+        return mtx
 
     def Analizar(self,cadena,grupo,lenar):
         cadena = '/'+cadena
-        cont = 0
+        mtx = ''
         puntero = 0
+        dig = ''
         while puntero < len(cadena):
             digit = cadena[puntero]
             if digit == ';':
                 digit = ''
-            elif digit == '/':
-                cont = 0
-            elif digit.isdigit():
-                cont+=1
-                # print(f'-{grupo}:{digit}:{cont}:len{lenar}')
-                num = Nums(grupo,digit,cont)
-                list_n.New_Num(num)
-                # list_n.enlist()
+            dig += digit            
             puntero+=1
+        mtx += '\t\t<tr>\n'
+        mtx += f'\t\t\t<td>G: {grupo}</td>\n'
+        fun = self.Analizar_II(dig,grupo,int(lenar),mtx)
+        return fun
 
-   
-    def graficar(self):
-        graph = ''
+    def Analizar_II(self,cadena, grupos,lenarr,mtx):
         suma = 0
-        if self.vacia():
-            print('lista vacia')
+        puntero = 0
+        cade = ''
+        lenarr = lenarr-1
+        while puntero < len(cadena):
+            char = cadena[puntero]
+            if char == '/':
+                if (puntero + 1) < len(cadena) and cadena[puntero + 1].isdigit():
+                    dig = int(cadena[puntero + 1])
+                    suma += dig
+                    cade += char
+                    puntero += 1  # Saltar al siguiente dígito
+                else:
+                    mtx += f'\t\t\t<td>{suma}</td>\n'
+                    cade += char
+            else:
+                cade += char
+            puntero += 1
+        if cade[1] != '/':
+            return self.Analizar_II(cade,grupos,lenarr,mtx)
         else:
-            aux = self.init
-            while aux:
-                print(aux.dato.Grupos)
-                print(f'len: {aux.dato.len}')
-                aux = aux.next
+            mtx+='\t\t</tr>\n'
+            return mtx
+
+    def graficar(self,mtx):
+        dat = self.ret_dato(mtx)
+        return dat
+
+
+        
+ 
+        
+        
+
+        
+        

@@ -29,15 +29,23 @@ class List_Nums:
         else:
             aux = self.init
             while aux:
-                print(aux.dato.prnt())
-                aux =aux.next
+                print(f'_> {aux.dato.prnt()} self: {self.len}')
+                aux = aux.next
 
     def operar(self,lenarr,groups):
+        if self.vacia():
+            return 'lista vacia'
+        else:
+            aux = self.init
+            while aux:
+                print(f'{aux.dato.dato}, self: {self.len}')
+                aux = aux.next
+        
+    def ope(self):
         if self.vacia():
             print('lista vacia')
         else:
             aux = self.init
             while aux:
-                if aux.dato.grupo == groups and aux.dato.dato == str(lenarr):
-                    return int(aux.dato.dato)
+                print(aux.dato.dato)
                 aux = aux.next

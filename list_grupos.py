@@ -1,5 +1,7 @@
 from list_iden import List_Identicos
+from Nums import List_Nums
 
+list_N = List_Nums()
 list_i = List_Identicos()
 
 class Iden:
@@ -92,9 +94,12 @@ class List_Grupos:
             list_i.New_gr(dato)
         self.Iguales()
     
-    def enlis_I(self):
-        list_i.ret_dato()
+    def enlis_I(self,mtx):
+        # fun = list_i.ret_dato()
+        fun = list_i.graficar(mtx)
+        if fun:
+            return fun
 
-    def graph(self):
-        list_i.graficar()
+
+
 
