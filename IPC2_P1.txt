@@ -1,5 +1,7 @@
 1. ingresar doc. 
+
 2. leer xml (elemtTree)
+
 3. -> crear tablas de matriz
 
     -> matriz sin procesar -
@@ -50,7 +52,63 @@
 	|   |---|---------------|
 	|   | 4 | 1 : 0 : 1 : 5 |
 	------------------------
+
 4. graficar
+	
+	x -> amp
+	y -> tiem
+A. FRECUENCIAS
+	   -tA-yx
+	node11 -> 2
+	node21 -> 0
+	node31 -> 3
+	node41 -> 1
+	node51 -> 0
+	node0 -> node11 -> node21 -> node31 -> node41 -> node51
+	node12 -> 3
+	node22 -> 0
+	node32 -> 4
+	node42 -> 0
+	node52 -> 0
+	node0 -> node12 -> node22 -> node32 -> node42 -> node52
+	node13 -> 0
+	node23 -> 6
+	node33 -> 0
+	node43 -> 1
+	node53 -> 3
+	node0 -> node13 -> node23 -> node33 -> node43 -> node53
+	node14 -> 4
+	node24 -> 3
+	node34 -> 2
+	node44 -> 5
+	node54 -> 1
+	node0 -> node14 -> node24 -> node34 -> node44 -> node54
+
+B. REDUCIDA
+
+	node0[label="Prueba 1"]
+	nodeA[label="G: 1 3"]
+	nodeB[label="G: 2 5"]
+	nodeC[label="G: 4"]
+	node0 -> nodeA -> nodeB -> nodeC
+	nodeA1[label="5"]
+	nodeB1[label="0"]
+	nodeC1[label="1"]
+	node0 -> nodeA1 -> nodeB1 -> nodeC1  
+	nodeA2[label="7"]
+	nodeB2[label="0"]
+	nodeC2[label="0"]
+	node0 -> nodeA2 -> nodeB2 -> nodeC2
+	nodeA3[label="0"]
+	nodeB3[label="9"]
+	nodeC3[label="1"]
+	node0 -> nodeA3 -> nodeB3 -> nodeC3
+	nodeA4[label="6"]
+	nodeB4[label="4"]
+	nodeC4[label="5"]
+	node0 -> nodeA4 -> nodeB4 -> nodeC4
+
+
 5. escribir salida
 
 

@@ -131,6 +131,53 @@ while opc != 'x':
             os.system('cls')
     elif opc == '5':
         print('Generar grafica')
+        print('<----------------------->')
+        list_sen.enlist()
+        print('<----------------------->')
+        print('           (x)           ')
+        print('<----------------------->')
+        z = input(' -> ')
+        resp = list_sen.search_sen(z)
+        os.system('cls')
+        while z != 'x':
+            if resp:
+                print('<----------------------->')
+                print('1.Grafica Frecuencias    ')
+                print('2.Grafica Grupos         ')
+                print('<----------------------->')
+                print('           (x)           ')
+                print('<----------------------->')
+                graf = input('-> ')
+                os.system('cls')
+                while graf != 'x':
+                    if graf == '1':
+                        os.system('cls')
+                        print('Grafica de Frecuencias')
+                        resp.Graph_fr()
+                    elif graf == '2':
+                        os.system('cls')
+                        print('Grafica de Grupos')
+                        resp.Graph_re()
+                    else:
+                        os.system('cls')
+                        print('Opcion no valida')
+                    print('<----------------------->')
+                    print('1.Grafica Frecuencias    ')
+                    print('2.Grafica Grupos         ')
+                    print('<----------------------->')
+                    print('           (x)           ')
+                    print('<----------------------->')
+                    graf = input('-> ')
+                    os.system('cls')
+            else:
+                print('Opcion no valida')
+            print('<----------------------->')
+            list_sen.enlist()
+            print('<----------------------->')
+            print('           (x)           ')
+            print('<----------------------->')
+            z = input(' -> ')
+            os.system('cls')
     elif opc == '6':
         print('iniciar sistema')
     elif opc == 'x':

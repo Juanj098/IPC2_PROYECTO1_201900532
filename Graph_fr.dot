@@ -1,0 +1,31 @@
+digraph G {
+        rankdir=TB
+        node [shape=circle, color=blue]
+        node0[label="Prueba 1"]
+	node0 -> "t: 5"
+	node0 -> "A: 4"
+	node11[label="2"]
+	node21[label="0"]
+	node31[label="3"]
+	node41[label="1"]
+	node51[label="0"]
+	node0 -> node11 -> node21 -> node31 -> node41 -> node51
+	node12[label="3"]
+	node22[label="0"]
+	node32[label="4"]
+	node42[label="0"]
+	node52[label="0"]
+	node0 -> node12 -> node22 -> node32 -> node42 -> node52
+	node13[label="0"]
+	node23[label="6"]
+	node33[label="0"]
+	node43[label="1"]
+	node53[label="3"]
+	node0 -> node13 -> node23 -> node33 -> node43 -> node53
+	node14[label="4"]
+	node24[label="3"]
+	node34[label="2"]
+	node44[label="5"]
+	node54[label="1"]
+	node0 -> node14 -> node24 -> node34 -> node44 -> node54
+}

@@ -42,3 +42,14 @@ class List_Datos:
                     if aux.dato.ti == str(t) and aux.dato.ampl == str(a): 
                         return aux.dato
                 aux = aux.next
+
+    def search_A(self,a,t):
+        if self.vacia():
+            print('Lista vacia')
+        else:
+            aux = self.init
+            while aux:
+                if aux.dato:
+                    if aux.dato.ti == str(t) and aux.dato.ampl == str(a): 
+                        return aux.dato
+                aux = aux.next

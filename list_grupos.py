@@ -95,8 +95,12 @@ class List_Grupos:
         self.Iguales()
     
     def enlis_I(self,mtx):
-        # fun = list_i.ret_dato()
         fun = list_i.graficar(mtx)
+        if fun:
+            return fun
+        
+    def Graph_re(self,Grp,amp):
+        fun = list_i.graficar_ii(Grp,amp)
         if fun:
             return fun
 

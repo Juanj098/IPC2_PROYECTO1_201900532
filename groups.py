@@ -7,3 +7,11 @@ class Nums:
 
     def prnt(self):
         return f'grupo:{self.grupo}, dato:{self.dato}, num:{self.num}'
+    
+class Suma:
+    def __init__(self,indice,sum) -> None:
+        self.indice = indice
+        self.sum = sum
+    
+    def prnt(self):
+        return f'grupo:{self.indice}, dato:{self.sum}'

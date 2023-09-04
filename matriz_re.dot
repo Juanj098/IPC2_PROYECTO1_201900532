@@ -7,30 +7,28 @@ digraph main {
 	<td>1</td>
 	<td>2</td>
 	<td>3</td>
+	<td>4</td>
 	</tr>
 		<tr>
-			<td>G: 1 2 10 </td>
-			<td>9</td>
-			<td>16</td>
-			<td>8</td>
-		</tr>
-		<tr>
-			<td>G: 3 4 5 </td>
-			<td>0</td>
-			<td>0</td>
-			<td>0</td>
-		</tr>
-		<tr>
-			<td>G: 6 7 </td>
+			<td>G: 1 3 </td>
+			<td>5</td>
 			<td>7</td>
 			<td>0</td>
-			<td>8</td>
+			<td>6</td>
 		</tr>
 		<tr>
-			<td>G: 8 9 </td>
-			<td>9</td>
-			<td>9</td>
+			<td>G: 2 5 </td>
 			<td>0</td>
+			<td>0</td>
+			<td>9</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>G: 4 </td>
+			<td>1</td>
+			<td>0</td>
+			<td>1</td>
+			<td>5</td>
 		</tr>
 	</table>>];
 }

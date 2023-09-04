@@ -29,23 +29,6 @@ class List_Nums:
         else:
             aux = self.init
             while aux:
-                print(f'_> {aux.dato.prnt()} self: {self.len}')
+                print(f'{aux.dato.prnt()}')
                 aux = aux.next
 
-    def operar(self,lenarr,groups):
-        if self.vacia():
-            return 'lista vacia'
-        else:
-            aux = self.init
-            while aux:
-                print(f'{aux.dato.dato}, self: {self.len}')
-                aux = aux.next
-        
-    def ope(self):
-        if self.vacia():
-            print('lista vacia')
-        else:
-            aux = self.init
-            while aux:
-                print(aux.dato.dato)
-                aux = aux.next
