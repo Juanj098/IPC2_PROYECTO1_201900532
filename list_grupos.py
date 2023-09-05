@@ -103,6 +103,10 @@ class List_Grupos:
         fun = list_i.graficar_ii(Grp,amp)
         if fun:
             return fun
+        
+    def Xml(self,path,name,amp):
+        xm = list_i.G_xml(path,name,amp)
+        return xm
 
 
 

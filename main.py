@@ -114,6 +114,27 @@ while opc != 'x':
             os.system('cls')
     elif opc == '3':
         print('Escribir archivo salida')
+        print('<------------------------->')
+        list_sen.enlist()
+        print('<------------------------->')
+        print('            (x)            ')
+        print('<------------------------->')
+        DocX = input('-> ')
+        busqueda = list_sen.search_sen(DocX)
+        os.system('cls')
+        while DocX != 'x':
+            if busqueda:
+                busqueda.Xml_salida()
+            else:
+                print('Error!')
+            print('<------------------------->')
+            list_sen.enlist()
+            print('<------------------------->')
+            print('            (x)            ')
+            print('<------------------------->')
+            DocX = input('-> ')
+            os.system('cls')
+
     elif opc == '4':
         os.system('cls')
         opc_4 = ''

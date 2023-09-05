@@ -173,6 +173,32 @@ class Senal:
             Doc.close()
         os.system("dot -Tpng Graph_re.dot -o Graph_re.png") 
 
+    def Xml_salida(self):
+        ruta = 'C:\\Users\\juanj\\OneDrive\\Escritorio\\IPC2\\IPC2_PROYECTO1_201900532\\salida.xml'
+        list_g.vaciar()
+        for y in range(1, int(self.tiem)+1):
+            patron = ''
+            data = ''
+            for x in range(1, int(self.amp)+1):
+                search = self.list.search_T(y,x)
+                if search:
+                    patron += search.state
+                    data += search.dat
+                    if x <= int(self.amp):
+                        data +=';'
+            gr = Grupos(y,patron,data,self.amp)
+            list_g.New_G(gr)
+        
+        #funciones
+        print('--------------')
+        list_g.enlist()
+        print('--------------')
+        list_g.Iguales()
+        print('--------------')
+
+        xml = list_g.Xml(ruta,self.name,self.amp)
+        print(xml)
+
 
 class Dato:
     def __init__(self,t,a,st,dat) -> None:

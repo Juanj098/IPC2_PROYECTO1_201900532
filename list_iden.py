@@ -1,3 +1,4 @@
+import xml.etree.ElementTree as ET 
 from Nums import List_Nums
 from groups import Suma
 
@@ -182,6 +183,74 @@ class List_Identicos:
     def graficar_ii(self,Grp,amp):
         dat = self.Proc(Grp,amp)
         return dat
+    
+    
+    def Xml_c(self,name,path,amp):
+        cont = 0
+        root = ET.Element('senalReducida')
+        senal = ET.SubElement(root,'senal',nombre = name, A = amp)
+        if self.vacia():
+            print ('Lista vacia')
+        else:
+            aux = self.init
+            while aux:
+                cont +=1
+                print(aux.dato.Grupos)
+                grupos = ET.SubElement(senal,'Grupo', g = str(cont))
+                tiempo = ET.SubElement(grupos,'tiempos')
+                tiempo.text = str(aux.dato.Grupos)
+                print(aux.dato.list)
+                self.xml_Analisis(aux.dato.list,grupos,amp)
+                aux = aux.next
+        path = str(path)
+        tree = ET.ElementTree(root)
+        tree.write(path,encoding='utf-8')
+    
+    def xml_Analisis(self,cadena,sub,amp):
+        cadena = '/'+cadena
+        puntero = 0
+        dig = ''
+        sumAmp = 0
+        digit = ''
+        while puntero < len(cadena):
+            digit = cadena[puntero]
+            if digit == ';':
+                digit = ''
+            dig += digit
+            puntero += 1
+        datosG = ET.SubElement(sub,'datosGrupo')
+        suma = self.Xml_suma(dig,sub,amp,datosG,sumAmp)
+        if suma:
+            suma_elm = ET.SubElement(datosG,'suma')
+            suma_elm.text = str(suma)
+            
+    def Xml_suma(self,cadena,sub,amp,datosG,sumAmp):
+        puntero = 0
+        suma = 0
+        dig = ''
+        cade = ''
+        while puntero < len(cadena):
+            char = cadena[puntero]
+            if char == '/':
+                if (puntero + 1) < len(cadena) and cadena[puntero+1].isdigit():
+                    dig = int(cadena[puntero + 1])
+                    suma += dig
+                    cade += char
+                    puntero+=1
+                else:
+                    sumAmp+=1
+                    ET.SubElement(datosG,'suma',A=str(sumAmp)).text = str(suma)
+                    cade += char
+            else:
+                cade+=char
+            puntero+=1
+        if cade[1] != '/' :
+            return self.Xml_suma(cade,sub,amp,datosG,sumAmp)
+
+
+
+    def G_xml(self,path,name,amp):
+        return self.Xml_c(name,path,amp)
  
         
         
