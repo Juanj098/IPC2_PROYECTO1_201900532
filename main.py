@@ -29,7 +29,7 @@ def lector_xml(Docs_xml):
                 elif str(dat) == '0':
                     st = '0'
                 new_dato = Dato(tim,amp,st,dat)
-                list_datos.new(new_dato)
+                list_datos.insert_dato_ordenado(new_dato)
             new_senal = Senal(name,t,a,list_datos)
             list_sen.new(new_senal)
     except:
@@ -57,6 +57,7 @@ while opc != 'x':
             name = os.path.basename(ruta)
             print(name)
             lector_xml(ruta)
+            list_sen.enlist_d()
         else:
             print('no se encontro archivo')
     elif opc == '2':
@@ -201,6 +202,29 @@ while opc != 'x':
             os.system('cls')
     elif opc == '6':
         print('iniciar sistema')
+        print('<----------------------------------------->')
+        print('  Seguro que desea reiniciar sistema? S/N  ')
+        print('<----------------------------------------->')
+        print('                    (X)                    ')
+        print('<----------------------------------------->')
+        SN = input('-> ') 
+        os.system('cls')
+        while SN != 'N' and SN != 'x':
+            if SN == 'S':
+                os.system('cls')
+                print('REINICIO')
+                list_sen.Clear_list()
+            else:
+                os.system('cls')
+                print('Opcion no disponible')
+            print('<----------------------------------------->')
+            print('  Seguro que desea reiniciar sistema? S/N  ')
+            print('<----------------------------------------->')
+            print('                    (X)                    ')
+            print('<----------------------------------------->')
+
+            SN = input('-> ') 
+            os.system('cls')
     elif opc == 'x':
         print('Salida')
     else:

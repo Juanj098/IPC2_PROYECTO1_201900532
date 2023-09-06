@@ -4,10 +4,10 @@ digraph main {
         <table border = '0' cellborder = '1' cellspacing = '0'>
         <tr>
 		<td bgcolor="Green">t|A</td>
-		<td>   1</td>
-		<td>   2</td>
-		<td>   3</td>
-		<td>   4</td>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
 	</tr>
 	<tr>
 		<td>1</td>

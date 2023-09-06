@@ -1,36 +1,36 @@
 <senalReducida>
     <senal nombre="Señal Facilita" A="3">
         <Grupo g="1">
-            <tiempos>1 2 10 </tiempos>
+            <tiempos>1 3 8 9 </tiempos>
             <datosGrupo>
-                <suma A="1">9</suma>
+                <suma A="1">14</suma>
                 <suma A="2">16</suma>
-                <suma A="3">8</suma>
-            </datosGrupo>
-        </Grupo>
-        <Grupo g="2">
-            <tiempos>3 4 5 </tiempos>
-            <datosGrupo>
-                <suma A="1">0</suma>
-                <suma A="2">0</suma>
                 <suma A="3">0</suma>
-            </datosGrupo>
-        </Grupo>
-        <Grupo g="3">
-            <tiempos>6 7 </tiempos>
-            <datosGrupo>
-                <suma A="1">7</suma>
-                <suma A="2">0</suma>
-                <suma A="3">8</suma>
-            </datosGrupo>
-        </Grupo>
-        <Grupo g="4">
-            <tiempos>8 9 </tiempos>
-            <datosGrupo>
-                <suma A="1">9</suma>
-                <suma A="2">9</suma>
-                <suma A="3">0</suma>
-            </datosGrupo>
-        </Grupo>
-    </senal>
-</senalReducida>
+                </datosGrupo>
+            </Grupo>
+            <Grupo g="2">
+                <tiempos>2 5 </tiempos>
+                <datosGrupo>
+                    <suma A="1">0</suma>
+                    <suma A="2">0</suma>
+                    <suma A="3">9</suma>
+                </datosGrupo>
+            </Grupo>
+            <Grupo g="3">
+                <tiempos>4 6 7 </tiempos>
+                <datosGrupo>
+                    <suma A="1">8</suma>
+                    <suma A="2">0</suma>
+                    <suma A="3">9</suma>
+                </datosGrupo>
+            </Grupo>
+            <Grupo g="4">
+                <tiempos>10 </tiempos>
+                <datosGrupo>
+                    <suma A="1">5</suma>
+                    <suma A="2">9</suma>
+                    <suma A="3">1</suma>
+                </datosGrupo>
+            </Grupo>
+        </senal>
+    </senalReducida>

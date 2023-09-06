@@ -12,6 +12,9 @@ class List_senal:
     def vacia(self):
         if self.init is None:
             return True
+    
+    def Clear_list(self):
+        self.init = None
 
     def new(self,dato):
         new_nodo = Nodo(dato)

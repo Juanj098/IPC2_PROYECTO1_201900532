@@ -113,23 +113,38 @@ B. REDUCIDA
 
 	XML
 
-	------senalReducida-------- [ELEMENT]
+	------senalReducida-------- [ELEMENT] x
 	|
 	|  ---- senal ------------ [SUBELEMENT]
 	|  |
 	|  |  ---- Grupo #-- 	   [SUBELEMENT]
-	|  |  |
-	|  |  |
+	|  |  |	  <tiempos></tiempos>
+	|  |  |   --- datosGrupo --
+	|  |  |   |<suma></suma>
+	|  |  |   |<suma></suma>
+	|  |  |   |<suma></suma>
+	|  |  |   |<suma></suma>
+    |  |  |   -----------------
 	|  |  -------------
 	|  |  
 	|  |  ---- Grupo #--
-	|  |  |  
-	|  |  |
+	|  |  |	  <tiempos></tiempos>
+	|  |  |   --- datosGrupo --
+	|  |  |   |<suma></suma>
+	|  |  |   |<suma></suma>  
+	|  |  |   |<suma></suma>
+	|  |  |   |<suma></suma>
+	|  |  |   -----------------
 	|  |  --------------
 	|  |  
 	|  |  ---- Grupo #--
-	|  |  | 
-	|  |  |  
+	|  |  |	  <tiempos></tiempos>
+	|  |  |   --- datosGrupo --
+	|  |  |   |<suma></suma>
+	|  |  |   |<suma></suma>
+	|  |  |   |<suma></suma>
+	|  |  |   |<suma></suma>
+	|  |  |   -----------------
 	|  |  --------------
 	|  |
 	|  -----------------------

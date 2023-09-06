@@ -18,6 +18,9 @@ class Senal:
     def prnt_L(self):
         return self.list.enlist()
     
+    def Clear_list(self):
+        list_g.vaciar()
+    
     def matriz_frec(self): #matriz de frecuencias
         mat = '''digraph main {
         node [shape = plaintext]
